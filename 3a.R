@@ -72,7 +72,7 @@ segment <- function(imgdf, prox=3) {
   tempDf=imgdf
   
   intDf = data.frame()
-  x=sapply(1:nrow(imgdf[1:1024,]),function(i){
+  x=sapply(1:nrow(imgdf),function(i){
     print(i)
     round(colMeans(getNeighbors(imgdf,i,3)))
   })
